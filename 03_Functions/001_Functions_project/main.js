@@ -62,16 +62,16 @@ console.log(updateLoyaltyPoints("USE_DISCOUNT"));  */
 // ==================== 4. Leap Year Checker ====================
 
 function isBonusYear(year) {
-    if ((year % 400 === 0) || ((year % 4 === 0) && (year % 100) !== 0)) {
+    if ((year % 400 === 0) || ((year % 4 === 0) && (year % 100 !== 0))) {
         return true;
     } else {
         return false;
     }
 }
 
-/* console.log(isBonusYear(2024));
+console.log(isBonusYear(2024));
 console.log(isBonusYear(1900));
-console.log(isBonusYear(2000)); */
+console.log(isBonusYear(2000));
 
 // ==================== 5. Receipt Abbreviation ====================
 
