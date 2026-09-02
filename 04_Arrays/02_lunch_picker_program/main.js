@@ -1,9 +1,9 @@
 let lunches = [];
 
 // Add a lunch to the end
-function addLunchToEnd(arr, luncItem) {
-    arr.push(luncItem);
-    console.log(`${luncItem} added to the end of the lunch menu.`);
+function addLunchToEnd(arr, lunchItem) {
+    arr.push(lunchItem);
+    console.log(`${lunchItem} added to the end of the lunch menu.`);
     return arr;
 }
 
@@ -11,9 +11,9 @@ function addLunchToEnd(arr, luncItem) {
 //console.log(addLunchToEnd(["Pizza", "Tacos"], "Burger"));
 
 // Add a lunch to the start
-function addLunchToStart(arr, luncItem) {
-    arr.unshift(luncItem);
-    console.log(`${luncItem} added to the start of the lunch menu.`);
+function addLunchToStart(arr, lunchItem) {
+    arr.unshift(lunchItem);
+    console.log(`${lunchItem} added to the start of the lunch menu.`);
     return arr;
 }
 
@@ -52,11 +52,11 @@ function removeFirstLunch(arr) {
 
 // Select random lunch
 function getRandomLunch(arr) {
-    let randomLunch = arr[(Math.floor(Math.random() * arr.length))];
     if(arr.length > 0) {
-        return `Randomly selected lunch: ${randomLunch}`;
+        let randomLunch = arr[(Math.floor(Math.random() * arr.length))];
+        console.log(`Randomly selected lunch: ${randomLunch}`);
     }else {
-        return "No lunches available.";
+        console.log("No lunches available.");
     }
 }
 
@@ -66,12 +66,14 @@ function getRandomLunch(arr) {
 // Show lunch menu
 function showLunchMenu(arr) {
     if(arr.length > 0) {
-        return `Menu items: ${arr}`;
+        console.log(`Menu items: ${arr.join(", ")}`);
     }else {
-        return "The menu is empty.";
+        console.log("The menu is empty.");
     }
 }
 
-console.log(showLunchMenu(lunches));
-console.log(showLunchMenu(["Greens", "Corns", "Beans"]));
-console.log(showLunchMenu(["Pizza", "Burger", "Fries", "Salad"]));
+//console.log(showLunchMenu(lunches));
+//console.log(showLunchMenu(["Greens", "Corns", "Beans"]));
+//console.log(showLunchMenu(["Pizza", "Burger", "Fries", "Salad"]));
+
+
